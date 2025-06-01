@@ -1,23 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<VAST version="2.0">
-  <Ad id="ad_test_01">
+<VAST version="3.0">
+  <Ad id="test-ad-001">
     <InLine>
-      <AdSystem>TestAdServer</AdSystem>
-      <AdTitle>Quảng cáo đầu video</AdTitle>
-      <Impression><![CDATA[https://example.com/impression]]></Impression>
+      <AdSystem>MyCustomAdServer</AdSystem>
+      <AdTitle>Test Quảng cáo Video</AdTitle>
+      <Impression>
+        <![CDATA[https://xn--hphong-ita.vn/track/impression]]>
+      </Impression>
       <Creatives>
         <Creative>
-          <Linear>
+          <Linear skipoffset="00:00:05">
             <Duration>00:00:15</Duration>
             <TrackingEvents>
-              <Tracking event="start"><![CDATA[https://example.com/start]]></Tracking>
-              <Tracking event="complete"><![CDATA[https://example.com/complete]]></Tracking>
+              <Tracking event="start">
+                <![CDATA[https://xn--hphong-ita.vn/track/start]]>
+              </Tracking>
+              <Tracking event="complete">
+                <![CDATA[https://xn--hphong-ita.vn/track/complete]]>
+              </Tracking>
+              <Tracking event="skip">
+                <![CDATA[https://xn--hphong-ita.vn/track/skip]]>
+              </Tracking>
             </TrackingEvents>
             <VideoClicks>
-              <ClickThrough><![CDATA[https://xn--hphong-ita.vn/]]></ClickThrough>
+              <ClickThrough>
+                <![CDATA[https://xn--hphong-ita.vn/landing-page]]>
+              </ClickThrough>
             </VideoClicks>
             <MediaFiles>
-              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360">
+              <MediaFile delivery="progressive" type="video/mp4" width="640" height="360" scalable="true" maintainAspectRatio="true">
                 <![CDATA[https://xn--hphong-ita.vn/test.mp4]]>
               </MediaFile>
             </MediaFiles>
